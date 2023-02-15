@@ -26,7 +26,8 @@ date_default_timezone_set('America/Sao_Paulo');
  
     $conn = mysqli_connect($host, $username, $password, $dbname);
     $sql = "INSERT INTO `Jordan` (`ip`, `res`, `date`) VALUES ('".$_SERVER['REMOTE_ADDR']."', '".$_SERVER['HTTP_USER_AGENT']."', '".date('Y-m-d H:i:s')."');";
-
+    $result = mysqli_query($conn, $sql);
+    mysqli_close($conn);
     
 
    ?>
