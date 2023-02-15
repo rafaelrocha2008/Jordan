@@ -10,7 +10,7 @@ $pogramador = 'Rafael Santos da Rocha';
 date_default_timezone_set('America/Sao_Paulo');
 //Tenta se conectar ao banco de dados
 try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql://bcba7a0545e3bd:123b2b59@us-cdbr-east-06.cleardb.net/heroku_9e4fecbb6fbe6ff?reconnect=true", 'rafael', 'pass');
     //Define o modo de erro como exceção
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
