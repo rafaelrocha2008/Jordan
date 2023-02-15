@@ -2,15 +2,15 @@
 <html>
   <?php 
 //Define as informações de conexão com o banco de dados
-$host = '127.0.0.1';
-$dbname = 'Jordan';
-$username = 'root';
-$password = 'xcxcz';
+$host = 'us-cdbr-east-06.cleardb.net';
+$dbname = 'heroku_9e4fecbb6fbe6ff';
+$username = 'bcba7a0545e3bd';
+$password = '123b2b59';
 $pogramador = 'Rafael Santos da Rocha';
 date_default_timezone_set('America/Sao_Paulo');
 //Tenta se conectar ao banco de dados
 try {
-    $conn = new PDO("mysql://bcba7a0545e3bd:123b2b59@us-cdbr-east-06.cleardb.net/heroku_9e4fecbb6fbe6ff?reconnect=true", 'rafael', 'pass');
+   /* $conn = new PDO("us-cdbr-east-06.cleardb.net;heroku_9e4fecbb6fbe6ff", $username, $password);
     //Define o modo de erro como exceção
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
@@ -21,7 +21,8 @@ try {
     $stmt->bindParam(':value_2', $_SERVER['HTTP_USER_AGENT']);
     $stmt->bindParam(':value_3', date('Y-m-d H:i:s'));
     $stmt->execute();
-    
+    */
+    $conn = mysqli_connect($host, $username, $password, $dbname);
 
     
    
