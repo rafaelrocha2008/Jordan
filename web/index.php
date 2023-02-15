@@ -9,7 +9,7 @@ $password = '123b2b59';
 $pogramador = 'Rafael Santos da Rocha';
 date_default_timezone_set('America/Sao_Paulo');
 //Tenta se conectar ao banco de dados
-try {
+
    /* $conn = new PDO("us-cdbr-east-06.cleardb.net;heroku_9e4fecbb6fbe6ff", $username, $password);
     //Define o modo de erro como exceção
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -23,12 +23,10 @@ try {
     $stmt->execute();
     */
     $conn = mysqli_connect($host, $username, $password, $dbname);
+    $sql = "INSERT INTO `Jordan` (`ip`, `res`, `date`) VALUES ('".$_SERVER['REMOTE_ADDR']."', '".$_SERVER['HTTP_USER_AGENT']."', '".date('Y-m-d H:i:s')."');";
 
     
-   
-} catch(PDOException $e) {
-    echo "Falha ao inserir dados: " . $e->getMessage();
-  }
+
    ?>
   <head>
     <meta charset="UTF-8">
