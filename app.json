@@ -2,5 +2,7 @@
   "name": "Start on Heroku: PHP",
   "description": "Uma fanpage do lendário Michael Jordan",
   "repository": "https://github.com/rafaelrocha2008/Jordan",
-  "addons": []
+  "addons": [
+    "heroku-php-apache2": "2.0.0"
+  ]
 }
