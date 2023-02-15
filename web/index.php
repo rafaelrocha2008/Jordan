@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <?php 
+  
 //Define as informações de conexão com o banco de dados
 $host = 'us-cdbr-east-06.cleardb.net';
 $dbname = 'heroku_9e4fecbb6fbe6ff';
